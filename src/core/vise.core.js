@@ -39,6 +39,7 @@
 		data = data || [];
 		data.unshift( this );
 		this.element.trigger( 'vise.' + id, data );
+		return this;
 	};
 
 	$.each([ 'on', 'off' ], function( i, method ) {
@@ -46,6 +47,7 @@
 			var args = $.makeArray( arguments );
 			args[0] = 'vise.' + id;
 			this.element[ method ].apply( this.element, args );
+			return this;
 		};
 	});
 
