@@ -1,0 +1,29 @@
+{
+  "name": "jquery.vise",
+  "title": "Vise",
+  "description": "A plugin to simulate responsive window sizes.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/koop/vise",
+  "author": {
+    "name": "Daryl Koopersmith",
+    "email": "d@darylkoop.com",
+    "url": "http://darylkoop.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/koop/vise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/koop/vise/issues"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/koop/vise/blob/master/LICENSE-GPL"
+    }
+  ],
+  "dependencies": {
+    "jquery": "~1.5"
+  },
+  "keywords": []
+}

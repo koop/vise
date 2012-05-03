@@ -1,0 +1,12 @@
+.vise .vise-mask {
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 100%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #000;
+	opacity: 0.5;
+	z-index: 200;
+}

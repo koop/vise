@@ -1,0 +1,28 @@
+/*! Vise - v0.1.0 - 2012-05-03
+* https://github.com/koop/vise
+* Copyright (c) 2012 Daryl Koopersmith; Licensed GPL */
+
+.vise {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.vise div {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	-webkit-transition: all 1s;
+}
+
+.vise iframe {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	border: 0;
+	z-index: 100;
+}
