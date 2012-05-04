@@ -1,9 +1,9 @@
 .vise .vise-frame {
 	position: absolute;
-	top:    -200px;
-	left:   -200px;
-	right:  -200px;
-	bottom: -200px;
+	top:    -1000px;
+	left:   -1000px;
+	right:  -1000px;
+	bottom: -1000px;
 	width: auto;
 	height: auto;
 	z-index: 50;
