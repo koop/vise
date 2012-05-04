@@ -1,6 +1,7 @@
 (function($){
 	var $doc = $(document),
 		cmp  = function( a, b ) { return a < b ? -1 : a > b ? 1 : 0; },
+		rclasses = /vise-(orientation|size|width|height)-\S*/g,
 		Vise;
 
 	Vise = function( element, options ) {
@@ -91,10 +92,14 @@
 	 * orientation - string         - Optional. Default false. Use 'portrait' or 'landscape'.
 	 */
 	Vise.prototype.resize = function( dimensions, orientation ) {
-		var width, height;
+		var width, height, classes, self = this;
 
-		if ( typeof dimensions === 'string' )
+		if ( typeof dimensions === 'string' ) {
+			this.size  = dimensions;
 			dimensions = this.sizes[ dimensions ] || false;
+		} else {
+			delete this.size;
+		}
 
 		dimensions = dimensions || [ '100%', '100%' ];
 
@@ -110,10 +115,18 @@
 		if ( this.options.scrollbars && typeof width === 'number' )
 			this.width += 15; // @todo: measure scrollbar width.
 
-		// this.element.addClass( 'vise-width-' + to.width + ' vise-height-' + to.height );
+		this.orientation = this.width > this.height ? 'landscape' : 'portrait';
+
+		// Remove current classes
+		this.element[0].className = this.element[0].className.replace( rclasses, '' );
+
+		// Generate new classes
+		classes = $.map([ 'orientation', 'size', 'width', 'height' ], function( param ) {
+			return self[ param ] ? 'vise-' + param + '-' + self[ param ] : '';
+		});
+		this.element.addClass( classes.join(' ') );
 
 		this.trigger('resize');
-
 		return this;
 	};
 
