@@ -1,14 +1,13 @@
 .vise .vise-frame {
 	position: absolute;
-	top: -100px;
-	left: -100px;
-	right: -100px;
-	bottom: -100px;
+	top:    -200px;
+	left:   -200px;
+	right:  -200px;
+	bottom: -200px;
 	width: auto;
 	height: auto;
 	z-index: 50;
-	/*background-color: transparent;*/
-	background-color: red;
+	background-color: transparent;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
